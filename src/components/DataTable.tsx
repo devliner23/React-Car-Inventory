@@ -20,16 +20,16 @@ function DataTable() {
                 open={open}
                 onClose={handleClose}
             />
-            <div className="flex flex-row">
+            <div className="flex justify-center mt-4">
                 <div>
                     <button
-                        className='p-3 bg-slate-700 rounded m-2 text-white hover:bg-slate-800 '
+                        className='p-5 bg-slate-700 rounded mr-3 text-white hover:bg-stone-800 '
                         onClick={() => handleOpen()}>
                         Add New Car
                     </button>
                 </div>
-                <Button className="p-3 bg-slate-700 text-white rounded m-3 hover:bg-slate-800 hover:text-white" >Update</Button>
-                <Button className="p-3 bg-slate-700 text-white rounded m-3 hover:bg-slate-800 hover:text-white" >Delete</Button>
+                <Button className="p-5 bg-slate-700 text-white rounded mr-3 hover:bg-stone-900 hover:text-white" >Update</Button>
+                <Button className="p-5 bg-slate-700 text-white rounded mr-3 hover:bg-stone-900 hover:text-white" >Delete</Button>
             </div>
         </>
     )

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 
 function Dashboard() {
   return (
-    <div className="bg-black">
+    <div className="bg-slate-800 min-h-screen">
       <Navbar />
       <DataTable />
     </div>

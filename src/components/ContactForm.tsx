@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <div>ContactForm</div>
+    <div>New Car</div>
   )
 }
 
