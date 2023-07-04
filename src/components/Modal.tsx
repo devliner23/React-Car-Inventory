@@ -2,6 +2,7 @@ import React from 'react'
 import ContactForm from './ContactForm'
 
 type Props = {
+    id?: string[]
     open: boolean;
     onClose: () => void;
 }
@@ -11,7 +12,7 @@ const Modal = ( props: Props ) => {
     return (
         <div 
             onClick={ props.onClose } 
-            className='fixed w-full h-full flex overflow-auto z-1 
+            className='fixed inset-0 flex overflow-auto z-50 
             justify-center align-middle bg-gray-300 bg-opacity-25'
         
         >
@@ -29,7 +30,7 @@ const Modal = ( props: Props ) => {
                         </p>
                     </div>
                     <div className="flex flex-col items-center text-center mt-3 p-2">
-                        <ContactForm />
+                        <ContactForm id={props.id}/>
                     </div>
                 </div>
             </div>
