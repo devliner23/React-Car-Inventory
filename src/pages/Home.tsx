@@ -1,4 +1,4 @@
-import Background from '../assets/images/background.jpg'
+import Background from '../assets/images/background.jpg';
 import { Link } from 'react-router-dom'
 
 function Home() {
