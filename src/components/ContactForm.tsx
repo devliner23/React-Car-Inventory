@@ -1,4 +1,3 @@
-import { useSubmit } from 'react-router-dom' 
 import Button from './Button'
 import Input from './Input'
 
@@ -23,7 +22,7 @@ const ContactForm = ( props:ContactFormProps ) => {
         console.log(props.id)
         console.log(data)
         if (props.id && props.id.length > 0) {
-            server_calls.update(props.id[0], data).then(() => {
+            server_calls.update(props.id[0]).then(() => {
                 console.log('Update Successful')
             })
             .catch((error) => {

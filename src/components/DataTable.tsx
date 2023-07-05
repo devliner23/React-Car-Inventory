@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from './Button';
 import Modal from './Modal';
 import { server_calls } from '../api/server';
@@ -6,7 +6,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 90, hide: true},
+    { field: 'id', headerName: 'ID', width: 90},
     { field: 'car_name', headerName: 'Car Owner', flex: 1},
     { field: 'car_make', headerName: 'Car Make', flex: 1},
     { field: 'car_model', headerName: 'Car Model', flex: 1},
@@ -58,7 +58,7 @@ function DataTable() {
                 style={{ height: 400, width: '100%', color: 'white' }}
             >
                 <h2 className='p-4 bg-slate-600 my-2 rounded'>My Cars</h2>
-                <DataGrid rows={contactData} columns={columns} rowsPerPageOptions={[5]}
+                <DataGrid rows={contactData} columns={columns}
                 checkboxSelection={true}
                 onRowSelectionModelChange={ (item: any) => {
                     setSelectionModel(item)

@@ -47,7 +47,6 @@ export const server_calls = {
                 'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`
             },
-            body: JSON.stringify(data)
 
         });
 
