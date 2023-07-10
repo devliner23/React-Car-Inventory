@@ -39,7 +39,7 @@ export const server_calls = {
         return await response.json()
     },
 
-    update: async (id: string) => {
+    update: async (id: string, data:any ={}) => {
         const response = await fetch(`https://car-inventory-rtwi.onrender.com/api/cars/${id}`, {
             method: 'PUT',
             headers: {
@@ -47,6 +47,8 @@ export const server_calls = {
                 'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`
             },
+            body: JSON.stringify(data)
+
 
         });
 

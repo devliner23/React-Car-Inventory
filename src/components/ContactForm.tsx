@@ -22,14 +22,9 @@ const ContactForm = ( props:ContactFormProps ) => {
         console.log(props.id)
         console.log(data)
         if (props.id && props.id.length > 0) {
-            server_calls.update(props.id[0]).then(() => {
-                console.log('Update Successful')
-            })
-            .catch((error) => {
-                console.log('Update Failed:', error);
-            })
-            console.log(`Updated: ${ data.first } ${ props.id }`)
-            setTimeout(() => {window.location.reload()}, 1000);
+            server_calls.update(props.id[0], data)
+            console.log(`Updated: ${ data.car_name } ${ props.id }`)
+            setTimeout(() => { window.location.reload() }, 5000);
             event.target.reset()
         } else {
             dispatch(chooseName(data.car_name));
@@ -38,17 +33,10 @@ const ContactForm = ( props:ContactFormProps ) => {
             dispatch(chooseYear(data.car_year));
             dispatch(chooseColor(data.car_color));
 
-            server_calls.create(store.getState()).then(() => {
-                console.log('Create Successful')
-            })
-            .catch((error) => {
-                console.log('Create Failed:', error);
-            })
-            setTimeout(() => {window.location.reload()}, 1000);
-            event.target.reset()
+            server_calls.create(store.getState())
+            setTimeout(() => { window.location.reload() }, 5000);
 
-            props.onClose();
-            
+    
         }
     }
 
